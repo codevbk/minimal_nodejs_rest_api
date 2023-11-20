@@ -8,6 +8,7 @@ const dotenv = require('dotenv').config();
 const createRoute = require('./routes/create.route'); 
 const readRoute = require('./routes/read.route'); 
 const updateRoute = require('./routes/update.route'); 
+const deleteRoute = require('./routes/delete.route'); 
 const app = express();
 
 const args = process.argv.slice(2);
@@ -38,6 +39,8 @@ app.use('/', createRoute);
 app.use('/', readRoute);
 
 app.use('/', updateRoute);
+
+app.use('/', deleteRoute);
 
 //Error Handling Middleware
 app.use((req, res) => {
