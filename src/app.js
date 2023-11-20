@@ -5,6 +5,7 @@ const rateLimit = require('express-rate-limit');
 const {body, param, validationResult} = require('express-validator');
 const httpCompression = require('compression');
 const dotenv = require('dotenv').config();
+const createRoute = require('./routes/create.route'); 
 const app = express();
 
 const args = process.argv.slice(2);
@@ -29,6 +30,8 @@ app.use(requestLimiter);
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
+
+app.use('/', createRoute);
 
 app.get('/', (req, res) => {
     res.status(200).json({message:'Hello World!'});
