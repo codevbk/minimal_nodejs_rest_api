@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  minimal_nodejs_rest_api-dev:
+    container_name: minimal_nodejs_rest_api-dev
+    image: codevbk/minimal_nodejs_rest_api:latest
+    ports:
+      - "3000:3000"
+    command: npm run develop
+    volumes:
+      - ./src:/app/src
