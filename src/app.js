@@ -6,6 +6,7 @@ const {body, param, validationResult} = require('express-validator');
 const httpCompression = require('compression');
 const dotenv = require('dotenv').config();
 const createRoute = require('./routes/create.route'); 
+const readRoute = require('./routes/read.route'); 
 const app = express();
 
 const args = process.argv.slice(2);
@@ -33,9 +34,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/', createRoute);
 
-app.get('/', (req, res) => {
-    res.status(200).json({message:'Hello World!'});
-});
+app.use('/', readRoute);
 
 //Error Handling Middleware
 app.use((req, res) => {
