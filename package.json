@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "test:create": "npx mocha tests/create.test.js --exit > tests/logs/create.test.result.txt",
     "test:read": "npx mocha tests/read.test.js --exit > tests/logs/read.test.result.txt",
-    "test:update": "npx mocha tests/update.test.js --exit > tests/logs/update.test.result.txt"
+    "test:update": "npx mocha tests/update.test.js --exit > tests/logs/update.test.result.txt",
+    "test:delete": "npx mocha tests/delete.test.js --exit > tests/logs/delete.test.result.txt"
   },
   "author": "codevbk",
   "keywords": [
