@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  minimal_nodejs_rest_api-prod:
+    container_name: minimal_nodejs_rest_api-prod
+    image: codevbk/minimal_nodejs_rest_api:latest
+    ports:
+      - "80:80"
+    command: npm run start
