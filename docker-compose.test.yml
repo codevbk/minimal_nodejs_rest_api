@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  minimal_nodejs_rest_api-test:
+    container_name: minimal_nodejs_rest_api-test
+    image: codevbk/minimal_nodejs_rest_api:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./tests:/app/tests
+      - ./tests/logs:/app/tests/logs
+    command: sh -c "npm run test:create ; npm run test:read ; npm run test:update ; npm run test:delete"
