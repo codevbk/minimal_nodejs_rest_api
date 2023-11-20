@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/app.js 80",
     "develop": "nodemon src/app.js",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test:create": "npx mocha tests/create.test.js --exit > tests/logs/create.test.result.txt"
   },
   "author": "codevbk",
   "keywords": [
@@ -29,7 +30,10 @@
     "helmet": "^7.1.0"
   },
   "devDependencies": {
+    "chai": "^4.3.10",
     "eslint": "^8.53.0",
-    "nodemon": "^3.0.1"
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
   }
 }
