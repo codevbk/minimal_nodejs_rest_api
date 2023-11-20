@@ -7,7 +7,8 @@
     "start": "node src/app.js 80",
     "develop": "nodemon src/app.js",
     "lint": "eslint .",
-    "test:create": "npx mocha tests/create.test.js --exit > tests/logs/create.test.result.txt"
+    "test:create": "npx mocha tests/create.test.js --exit > tests/logs/create.test.result.txt",
+    "test:read": "npx mocha tests/read.test.js --exit > tests/logs/read.test.result.txt"
   },
   "author": "codevbk",
   "keywords": [
