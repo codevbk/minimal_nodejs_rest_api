@@ -7,6 +7,7 @@ const httpCompression = require('compression');
 const dotenv = require('dotenv').config();
 const createRoute = require('./routes/create.route'); 
 const readRoute = require('./routes/read.route'); 
+const updateRoute = require('./routes/update.route'); 
 const app = express();
 
 const args = process.argv.slice(2);
@@ -35,6 +36,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', createRoute);
 
 app.use('/', readRoute);
+
+app.use('/', updateRoute);
 
 //Error Handling Middleware
 app.use((req, res) => {
