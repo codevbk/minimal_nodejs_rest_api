@@ -10,7 +10,17 @@
     "test:create": "npx mocha tests/create.test.js --exit > tests/logs/create.test.result.txt",
     "test:read": "npx mocha tests/read.test.js --exit > tests/logs/read.test.result.txt",
     "test:update": "npx mocha tests/update.test.js --exit > tests/logs/update.test.result.txt",
-    "test:delete": "npx mocha tests/delete.test.js --exit > tests/logs/delete.test.result.txt"
+    "test:delete": "npx mocha tests/delete.test.js --exit > tests/logs/delete.test.result.txt",
+    "docker:build": "docker-compose -f docker-compose.yml build",
+    "docker:prod-start": "docker-compose -f docker-compose.prod.yml up -d",
+    "docker:prod-stop": "docker-compose -f docker-compose.prod.yml stop",
+    "docker:prod-delete": "docker-compose -f docker-compose.prod.yml down",
+    "docker:dev-start": "docker-compose -f docker-compose.dev.yml up -d",
+    "docker:dev-stop": "docker-compose -f docker-compose.dev.yml stop",
+    "docker:dev-delete": "docker-compose -f docker-compose.dev.yml down",
+    "docker:test-start": "docker-compose -f docker-compose.test.yml up -d",
+    "docker:test-stop": "docker-compose -f docker-compose.test.yml stop",
+    "docker:test-delete": "docker-compose -f docker-compose.test.yml down"
   },
   "author": "codevbk",
   "keywords": [
